@@ -1,0 +1,81 @@
+.container {
+	width: 500px;
+	height: 500px;
+	border: grey 1px solid;
+}
+
+.block {
+	width: 100%;
+	height: 100%;
+	z-index: 2;
+	position: relative;
+	display: inline-block;
+}
+
+.square,
+.blackSquare {
+	width: 50px;
+	height: 50px;
+	border: red 1px solid;
+	position: absolute;
+	transform: translate(-50%,-50%);
+}
+
+.blackSquare {
+	background: black;
+}
+
+.circle {
+	border-radius: 50%;
+	width: 50px;
+	height: 50px;
+	border: red 1px solid;
+	position: absolute;
+	transform: translate(-50%,-50%);
+}
+
+.button {
+	color: #fff;
+	font-family: 'Roboto', sans-serif;
+	text-decoration: none;
+	user-select: none;
+	background: rgb(212,75,56);
+	padding: .7em 1.5em;
+	outline: none;
+	width: 119.3px;
+	height: 20px;
+	text-align: center;
+	float: left;
+}
+.zoomButton {
+	display: block;
+	width: 30px;
+	height: 30px;
+	color: #fff;
+ 	font-family: 'Roboto', sans-serif;
+ 	text-decoration: none;
+ 	user-select: none;
+ 	background: rgb(212,75,56);
+ 	outline: none;
+ 	text-align: center;
+}
+.zoomButton:hover,
+.button:hover { background: rgb(232,95,76); }
+.zoomButton:active,
+.button:active { background: rgb(152,15,0); }
+
+.zoom {
+	width: 30px;
+	height: 60px;
+	position: absolute;
+	font-size: 12px;
+	left: 510px;
+	border: 1px #d44b38 solid;
+	z-index: 9999;
+}
+
+.mask {
+	width: 500px;
+	height: 500px;
+	overflow: hidden !important;
+}

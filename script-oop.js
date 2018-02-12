@@ -59,7 +59,7 @@ class Workspace {
   }
 
   zoomIn () {
-		this.setZoom(this.currZoom *= Workspace.zoomStep);
+    this.setZoom(this.currZoom *= Workspace.zoomStep);
   }
 
   zoomOut () {
@@ -68,9 +68,9 @@ class Workspace {
 
   setZoom (zoom, save = true) {
     this.currZoom = zoom
-		this.block.style.transform = 'scale(' + this.currZoom + ')';
+    this.block.style.transform = 'scale(' + this.currZoom + ')';
 
-		if (save) { this.saveAllTypes() }
+    if (save) { this.saveAllTypes() }
   }
 
   saveType (type) {
@@ -81,7 +81,7 @@ class Workspace {
         zoom: this.currZoom
       }
     })
-		localStorage.setItem("localStorage." + type + "Arr", JSON.stringify(shapesData));
+    localStorage.setItem("localStorage." + type + "Arr", JSON.stringify(shapesData));
   }
 
   saveAllTypes () {
@@ -122,7 +122,7 @@ class Shape {
 
   attach () {
     this.obj = createElementFromHtml('<div class="' + this.constructor.type + '"></div>');
-		this.workspace.block.appendChild(this.obj);
+    this.workspace.block.appendChild(this.obj);
   }
 
   redraw () {
@@ -213,8 +213,8 @@ function createElementFromHtml(html) {
 
 function getCoords(elem) {
   var box = elem.getBoundingClientRect();
-    return {
-      top: box.top + pageYOffset,
-      left: box.left + pageXOffset
+  return {
+    top: box.top + pageYOffset,
+    left: box.left + pageXOffset
   };
 }

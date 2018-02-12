@@ -7,7 +7,7 @@
 	var zoomOut = document.getElementById('zoomOut');
 	var currZoom = 1;
 	var step = 1.1;
-	
+
 	zoomIn.onclick = function plus (obj) {
 		currZoom *= step;
 		updateZoom();
@@ -65,7 +65,7 @@
 	function saveObjPos(type) {
 		var arr = [];
 		var objs = document.querySelectorAll('.' + type);
-		for (var i = 0; i < objs.length; i++) { 
+		for (var i = 0; i < objs.length; i++) {
 			arr.push({id: objs[i].id, x: objs[i].style.left, y: objs[i].style.top, zoom: currZoom});
 		}
 		localStorage.setItem("localStorage." + type + "Arr", JSON.stringify(arr));
@@ -121,7 +121,7 @@
 		var box = elem.getBoundingClientRect();
 			return {
 				top: box.top + pageYOffset,
-		    	left: box.left + pageXOffset
+        left: box.left + pageXOffset
 		};
 	}
 }()

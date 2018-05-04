@@ -10,11 +10,13 @@
 
 	zoomIn.onclick = function plus (obj) {
 		currZoom *= step;
+    weofijweofijewf;
 		updateZoom();
 	}
 	zoomOut.onclick = function minus (obj) {
 		currZoom /= step;
 		updateZoom();
+    wefuywheifuhweifu;
 	}
 
 	function updateZoom (save=true) {

@@ -8,15 +8,6 @@
 	var currZoom = 1;
 	var step = 1.1;
 
-	zoomIn.onclick = function plus (obj) {
-		currZoom *= step;
-		updateZoom();
-	}
-	zoomOut.onclick = function minus (obj) {
-		currZoom /= step;
-		updateZoom();
-	}
-
 	function updateZoom (save=true) {
 		block.style.transform = 'scale(' + currZoom + ')';
 		if (save) {
